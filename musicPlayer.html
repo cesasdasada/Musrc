@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>音乐播放器</title>
+</head>
+<link rel="stylesheet" href="./css/test.css">
+<link rel="stylesheet" href="./css/index.css">
+
+<body>
+    <audio preload src="">
+    </audio>
+    <div class="bg">
+    </div>
+    <div class="main-zinterface">
+        <div class="topNav">
+            <ul class="navList clearfloat">
+                <li class="fl"></li>
+                <li class="fl activate active"><span>我的</span></li>
+                <li class="fl activate"><span>推荐</span></li>
+                <li class="fl activate"><span>音乐库</span></li>
+                <li class="fl"></li>
+            </ul>
+        </div>
+        <div class="user">
+            <span><img class="auto-img" src="./images/head.jpg" alt=""></span>
+            <span>西野七濑 </span>
+            <span><img src="" alt=""></span>
+        </div>
+        <!-- 操作歌曲界面 -->
+        <div class="x">
+            <div class="myMusic">
+                <div class="bg2"></div>
+                <h2>我的歌曲</h2>
+                <div class="bendi local clearfloat">
+                    <img class="fl" src="./images/localMusic.png" alt="">
+                    <div class="fl x">
+                        <span>本地歌曲</span>
+                        <span class="local-song"></span>
+                    </div>
+                </div>
+                <div class="download clearfloat">
+                    <img class="fl" src="./images/download.png" alt="">
+                    <div class="fl">
+                        <span>下载管理</span>
+                        <span class="number">新增歌曲</span>
+                    </div>
+                </div>
+            </div>
+            <div class="myList">
+                <div class="bg2"></div>
+                <h2>我的列表</h2>
+                <div class="bendi clearfloat">
+                    <img class="fl" src="./images/list2.png" alt="">
+                    <div class="fl">
+                        <span>默认列表</span>
+                        <span class="number">新增歌曲</span>
+                    </div>
+                </div>
+                <div class="bendi clearMarting clearfloat">
+                    <img class="fl" src="./images/recently.png" alt="">
+                    <div class="fl">
+                        <span>最近播放</span>
+                        <span class="number">42首歌曲</span>
+                    </div>
+                </div>
+                <div class="bendi lick clearMarting  clearfloat">
+                    <img class="fl" src="./images/ilick.png" alt="">
+                    <div class="fl">
+                        <span>我喜欢</span>
+                        <span class="number">6首歌曲</span>
+                    </div>
+                </div>
+                <div class="bendi clearMarting  clearfloat">
+                    <img class="fl" src="./images/new.png" alt="">
+                    <div class="fl">
+                        <span>新建列表</span>
+                        <span class="number">2个列表</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottonNav clearfloat">
+            <div class="headPhoto  fl">
+                <img class="auto-img homePage" src="./images/head.jpg" alt="">
+            </div>
+            <div class="module fl">
+                <div class="progress">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <div class="keys clearfloat">
+                    <div class="songName fl">
+                        <h3>歌曲名</h3>
+                        <span>歌手</span>
+                    </div>
+                    <div class="paly fl">
+                        <ul class='clearfloat'>
+                            <li class="fl">
+                                <img class="auto-img last" src="./images/last.png" alt="">
+                            </li>
+                            <li class="fl">
+                                <img class="auto-img state" data-play='0' src="./images/state.png" alt="">
+                            </li>
+                            <li class="fl">
+                                <img class="auto-img next" src="./images/next.png" alt="">
+                            </li>
+                            <li class="fl song-pattern">
+                                <img class="auto-img" data-min="1" data-max="3" data-value="1" src="./images/1.png"
+                                    alt="">
+                            </li>
+                            <li class="fl">
+                                <img class="auto-img love" src="./images/heart.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 歌曲内容界面 -->
+    <div class="content local-music">
+        <div class="bendi head clearfloat">
+            <img class="fl" src="./images/localMusic.png" alt="">
+            <div class="fl">
+                <span>本地歌曲</span>
+                <span class="songs"></span>
+            </div>
+        </div>
+        <div class="content-music">
+            <ul class="list-music">
+            </ul>
+        </div>
+        <div class="back-x">
+            <input type="button">
+        </div>
+    </div>
+    <!-- 我喜欢的歌曲 -->
+    <div class="love-music content">
+        <div class="bendi head clearfloat">
+            <img class="fl" src="./images/localMusic.png" alt="">
+            <div class="fl">
+                <span>我喜欢</span>
+                <span class="number">27首歌曲</span>
+            </div>
+        </div>
+        <div class="content-music">
+            <ul class="like-list-music">
+            </ul>
+        </div>
+        <div class="back-x">
+            <input type="button">
+        </div>
+    </div>
+    <!-- 播放歌曲页面 -->
+    <div class="play-music">
+        <div class="bottonNav clearfloat">
+            <div class="headPhoto fl">
+                <img class="auto-img icon" src="./images/head.jpg" alt="">
+            </div>
+            <div class="module fl">
+                <div class="progress">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <div class="keys clearfloat">
+                    <div class="songName fl">
+                        <h3>歌曲名</h3>
+                        <span>歌手</span>
+                    </div>
+                    <div class="paly fl">
+                        <ul class='clearfloat'>
+                            <li class="fl">
+                                <img class="auto-img last" src="./images/last.png" alt="">
+                            </li>
+                            <li class="fl">
+                                <img class="auto-img state" data-play='0' src="./images/state.png" alt="">
+                            </li>
+                            <li class="fl">
+                                <img class="auto-img next" src="./images/next.png" alt="">
+                            </li>
+                            <li class="fl song-pattern">
+                                <img class="auto-img" data-min="1" data-max="3" data-value="1" src="./images/1.png"
+                                    alt="">
+                            </li>
+                            <li class="fl">
+                                <img class="auto-img" src="./images/heart.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="play-time clearfloat">
+            <span class="ct fl"></span>
+            <span class="dt fr"></span>
+        </div>
+        <div class="music-word">
+            <div class="move-word">
+                <p>还没播放任何歌曲</p>
+            </div>
+        </div>
+        <div class="back">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
